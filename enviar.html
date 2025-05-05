@@ -4,24 +4,50 @@
   <meta charset="UTF-8">
   <title>Tienda de Libros</title>
   <style>
-  
-  body{
+     body {
+        font-family: Arial, sans-serif;
+      background: #dce4e4;
+      padding: 20px;
 
-  .button-volver {
-        margin-top: 10px;
-        padding: 10px 15px;
-        background-color: #12ce67;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      }
+    }
+    button {
+        color: rgb(238, 235, 238);
+        background-color: #28dd40;
+        border-radius: 100px;
+        border-color: #13dd2e;
+     }
+     
+     .boton-derecha {
+    float: right;
+    margin-left: 10px; /* Opcional, para separar los botones */
+     }
+
+     .container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;    /* Centra verticalmente */
+  height: 100vh;          /* Ajusta la altura del contenedor */
+}
+
+.texto {
+  text-align: center;     /* Alinea el texto dentro del elemento */
+}
+
+  
+ 
     </style>
     </head>
 
     <body>
-      <h1> Tu compra exitosa!</h1>
-<a href="index.html"><button>Volver</button></a> 
+
+      <a href="contactos.html"><button class="boton-derecha">Contactos</button></a>
+      <a href="index.html"><button>Inicio</button></a> <br> <br>
+      <a href="comprar.html"><button>Volver</button></a> 
+      <a href="comprar.html"><button class="boton-derecha">Biblioteca</button></a>
+
+
+      <div class="container">
+        <h1>Tu Compra Fue un Exito!</h1>
+      </div>
 </body>
     
