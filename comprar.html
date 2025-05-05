@@ -1,0 +1,143 @@
+<h1>DAYA</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca de Libros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .libro {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .libro img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .libro h3 {
+      margin: 10px 0 5px;
+    }
+
+    .libro p {
+      margin: 0;
+      color: #333;
+    }
+
+    .boton-comprar {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .boton-comprar:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Biblioteca de Libros</h1>
+  <div class="catalogo">
+    <!-- Libro 1 -->
+    <div class="libro">
+      <img src="https://urukeditores.com/wp-content/uploads/2020/11/EL-PRINCIPITO.png" alt="El Principito">
+      <h3>El Principito</h3>
+      <p>$10.000</p>
+      <button class="boton-comprar" onclick="comprar('el_principito')">Comprar</button>
+    </div>
+
+    <!-- Libro 2 -->
+    <div class="libro">
+      <img src="https://th.bing.com/th/id/OIP.fCvL8Zz3Xv6kdY6xNdURGQHaIi?cb=iwp1&rs=1&pid=ImgDetMain" alt="Cien Años de Soledad">
+      <h3>Cien Años de Soledad</h3>
+      <p>$15.000</p>
+      <button class="boton-comprar" onclick="comprar('cien_anos_soledad')">Comprar</button>
+    </div>
+
+    <!-- Libro 3 -->
+    <div class="libro">
+      <img src="https://th.bing.com/th/id/R.3e732916fdad064580c1591129048b2c?rik=UOsfcGIbfLBv1Q&pid=ImgRaw&r=0" alt="Don Quijote">
+      <h3>Don Quijote</h3>
+      <p>$12.000</p>
+      <button class="boton-comprar" onclick="comprar('don_quijote')">Comprar</button>
+    </div>
+
+    <!-- Libro 4 -->
+    <div class="libro">
+      <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/12130153/cronica.jpg" alt="Cronica de una muerte anunciada">
+      <h3>Cronica de una muerte anunciada</h3>
+      <p>$20.000</p>
+      <button class="boton-comprar" onclick="comprar('Cronica_de_una_muerte_anunciada')">Comprar</button>
+    </div>
+
+    <!-- Libro 5 -->
+    <div class="libro">
+      <img src="https://th.bing.com/th/id/OIP.x3QQ2qdCUmVuOr3QYmL93QHaLC?cb=iwp1&w=1000&h=1491&rs=1&pid=ImgDetMain" alt="el arbol de la ciencia">
+      <h3>El árbol de la ciencia</h3>
+      <p>$15.000</p>
+      <button class="boton-comprar" onclick="comprar('El_árbol_de_la_ciencia')">Comprar</button>
+    </div>
+
+    <!-- Libro 6 -->
+    <div class="libro">
+      <img src="https://th.bing.com/th/id/OIP.MXT9kbCpLqb64RBf1-_JagHaHa?cb=iwp1&rs=1&pid=ImgDetMain" alt="una breve historia del tiempo">
+      <h3>Una breve historia del tiempo</h3>
+      <p>$18.500</p>
+      <button class="boton-comprar" onclick="comprar('una_breve_historia_del tiempo')">Comprar</button>
+    </div>
+
+    <!-- Libro 7 -->
+    <div class="libro">
+      <img src="https://i5.walmartimages.com/asr/b59db2c2-a751-4aa6-ab57-dcfa0df476e6_1.eafd95cfe95653fb727f048afeb64f85.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff" alt="lo que callamos las mujeres">
+      <h3>Lo que callamos las mujeres</h3>
+      <p>$40.000</p>
+      <button class="boton-comprar" onclick="comprar('lo_que_callamos_las_mujeres')">Comprar</button>
+    </div>
+
+    <!-- Libro 8 -->
+    <div class="libro">
+      <img src="https://edicionessembrando.com/wp-content/uploads/vidadejesus-600x600.jpg" alt="vida de jesus">
+      <h3>Vida de Jesús</h3>
+      <p>$30.000</p>
+      <button class="boton-comprar" onclick="comprar('vida_de_jesus')">Comprar</button>
+    </div>
+  </div>
+
+  <script>
+    function comprar(libroId) {
+      // Redirige al formulario de compra con el libro seleccionado
+      window.location.href = `enviar.html?libro=${libroId}`;
+    }
+  </script>
+</body>
+</html>

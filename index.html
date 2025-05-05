@@ -2,44 +2,85 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Formulario</title>
+  <title>Tienda de Libros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      border: blue;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Formulario de Libros</h1>
-  <a href="index.html" class="btn-2">Inicio</a>
-  <br>
-  <a href="db.json">Libros Disponibles</a>
-  <br>
-  <a href="app.html">editar</a>
+  <div class="container">
+    <h1>Comprar Libros</h1>
+    <form action="comprar.html">
+      <label for="libro">Selecciona un libro:</label>
+      <select id="libro" name="libro" required>
+        <option value="">-- Elige un libro --</option>
+        <option value="el_principito">El Principito - $10.000</option>
+        <option value="cien_anos_soledad">Cien años de soledad - $15.000</option>
+        <option value="don_quijote">Don Quijote - $12.000</option>
+        <option value="El árbol de la ciencia">El árbol de la ciencia - $15.000</option>
+        <option value="Cronica de una muerte anunciada">Cronica de una muerte anunciada- $20.000</option>
+        <option value="Una breve historia del tiempo">Una breve historia del tiempo - $18.500</option>
+        <option value="don_quijote">Lo que callamos las mujeres - $40.000</option>
+        <option value="don_quijote">Vida de Jesús - $30.000</option>
+      </select>
 
-<br>
-<br>
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+      <label for="nombre">Tu nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" id="direccion" name="direccion" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <br>
+        <a href="comprar.html"><button type="submit">Comprar</button></a>
 
 
-  <form action="http://localhost:3000/books" method="POST">
-    <label for="id">Id:</label>
-    <input type="number" name="id" id="id" required><br><br>
-
-
-    <label for="nombre">Nombre:</label>
-    <input type="text" name="nombre" id="nombre" required><br><br>
-
-    <label for="description">Descripcion:</label>
-    <input type="text" name="description" id="description" required><br><br>
-
-    <label for="price">precio:</label>
-    <input type="number" name="price" id="price" required><br><br>
-
-    <button type="submit">Enviar</button>
-    
-    
-    <head>
         <link href="styles.css" rel="stylesheet" type="text/css">
-        </head>
-    
-        <script src="script.js"></script>
-
-
-  </form>
+      </head>
+  
+      <script src="script.js"></script>
+    </form>
+  </div>
 </body>
 </html>
+
+
