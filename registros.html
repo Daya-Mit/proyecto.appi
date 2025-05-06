@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ver Registros de sus Compras Canceladas</title>
+  <style>
+     body {
+        font-family: Arial, sans-serif;
+      background: #dce4e4;
+      padding: 20px;
+
+    }
+    button {
+        color: rgb(238, 235, 238);
+        background-color: #28dd40;
+        border-radius: 100px;
+        border-color: #13dd2e;
+     }
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 10px;
+      text-align: left;
+    }
+    .cancelada {
+      background-color: #f8d7da;
+    }
+    
+
+  </style>
+</head>
+<body>
+    <a href="comprar.html"><button>Volver</button></a> <br> <br>
+  <h2 style="text-align: center;">Registros de Compras Canceladas Anteriormente</h2>
+  <table id="tabla-compras">
+    <thead>
+      <tr>
+        <th>ID</th> 
+        <th>Cliente</th>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Estado</th>
+        
+        
+    
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí se insertarán los registros -->
+    </tbody>
+  </table>
+
+  <script>
+    // Simulación de datos (esto normalmente vendría de un servidor o API)
+    const compras = [
+      { id: 1, cliente: 'Daya', producto: 'El principito', estado: 'completada' },
+      { id: 3, cliente: 'Sebastian Giraldo', producto: 'El principito',precio: '10.000', estado: 'cancelada' },
+      { id: 2, cliente: 'Sebastian Giraldo', producto: 'Cronica de una Muerte Anunciada', precio: '20.000', estado: 'cancelada' },
+      { id: 3, cliente: 'Sebastian Giraldo', producto: 'Cien años de soledad',precio: '15.000', estado: 'cancelada' }, 
+    ]; 
+  
+
+    const tbody = document.querySelector('#tabla-compras tbody');
+
+    // Filtrar solo las compras canceladas
+    const canceladas = compras.filter(compra => compra.estado === 'cancelada');
+
+    // Insertar en la tabla
+    canceladas.forEach(compra => {
+      const fila = document.createElement('tr');
+      fila.classList.add('cancelada');
+      fila.innerHTML = `
+        <td>${compra.id}</td>
+        <td>${compra.cliente}</td>
+        <td>${compra.producto}</td>
+          <td>${compra.precio}</td>
+        <td>${compra.estado}</td>
+      `;
+      tbody.appendChild(fila);
+    });
+  
+  </script>
+</body>
+</html>
